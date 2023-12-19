@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@layer base{
+  .s{
+    @apply  text-xs text-custom-300;
+  }
+  .u{
+    @apply hidden;
+  }
+  .n{
+    @apply w-full md:w-[300px] lg:w-[420px]  border-2 rounded-md p-2 border-custom-400 focus:outline-none focus:border-custom-200;
+  }
+  .e{
+    @apply w-full md:w-[300px] lg:w-[420px]  border-2 rounded-md p-2 border-custom-300 focus:outline-none focus:border-custom-300;
+  }
+  .n1{
+    @apply  w-1/2 md:w-[60px] lg:w-[70px] border-2 rounded-md p-2 border-custom-400 focus:outline-none focus:border-custom-200;
+  }
+  .e1{
+    @apply  w-1/2 md:w-[60px] lg:w-[70px] border-2 rounded-md p-2 border-custom-300 focus:outline-none focus:border-custom-300;
+  }
+  .n2{
+    @apply w-full md:w-[148px] lg:w-[248px]  border-2 rounded-md p-2 border-custom-400 focus:outline-none focus:border-custom-200;
+  }
+  .e2{
+    @apply w-full md:w-[148px] lg:w-[248px]  border-2 rounded-md p-2 border-custom-300 focus:outline-none focus:border-custom-300;
+  }
+  .n3{
+    @apply ml-3 w-1/2 md:w-[60px] lg:w-[70px] border-2 rounded-md p-2 border-custom-400 focus:outline-none focus:border-custom-200;
+  }
+  .e3{
+    @apply ml-3  w-1/2 md:w-[60px] lg:w-[70px] border-2 rounded-md p-2 border-custom-300 focus:outline-none focus:border-custom-300;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: 18px;
+
 }
